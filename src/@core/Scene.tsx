@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {
     useCallback,
     useContext,
@@ -67,12 +68,12 @@ export default function Scene({ id, children }: Props) {
     const initEvents = useCallback(async () => {
         await publish<SceneInitEvent>('scene-init', id);
         // ensure everything is ready on next idle callback
-        idleCallback.current = window.requestIdleCallback(
-            () => {
-                publish<SceneReadyEvent>('scene-ready', id);
-            },
-            { timeout: sceneReadyTimeout }
-        );
+        // idleCallback.current = window.requestIdleCallback(
+        //     () => {
+        //         publish<SceneReadyEvent>('scene-ready', id);
+        //     },
+        //     { timeout: sceneReadyTimeout }
+        // );
     }, [publish, id]);
 
     const contextValue = useMemo<SceneContextValue>(
@@ -121,7 +122,7 @@ export default function Scene({ id, children }: Props) {
             // leaving scene
             setInstances([]);
         }
-        return () => window.cancelIdleCallback(idleCallback.current);
+        // return () => window.cancelIdleCallback(idleCallback.current);
     }, [currentScene, id, initEvents]);
 
     // skip rendering scene content

@@ -46,7 +46,7 @@ export function useSound({ src, loop = false, volume = 1, onStop }: SoundProps) 
         if (canPlayAudio) {
             // catch possible abort error.
             // see: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
-            instance.play().catch(() => {});
+            instance.play().catch();
         }
     }, [instance]);
 

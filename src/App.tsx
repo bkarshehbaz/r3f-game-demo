@@ -1,52 +1,83 @@
-import { css, Global } from '@emotion/core';
-import React from 'react';
-import AssetLoader from './@core/AssetLoader';
-import Game from './@core/Game';
-import Scene from './@core/Scene';
-import SceneManager from './@core/SceneManager';
-import useWindowSize from './@core/useWindowSize';
-import OfficeScene from './scenes/OfficeScene';
-import OtherScene from './scenes/OtherScene';
-import soundData from './soundData';
-import spriteData from './spriteData';
-import globalStyles from './styles/global';
+/* eslint-disable */ 
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./utils/setAuthToken";
 
-const styles = {
-    root: (width: number, height: number) => css`
-        display: flex;
-        width: ${width - (width % 2)}px;
-        height: ${height - (height % 2)}px;
-        justify-content: center;
-        align-items: center;
-    `,
-};
+import { setCurrentUser, logoutUser } from "./actions/authActions";
+import { Provider } from "react-redux";
+import store from "./store";
 
-const urls = [
-    ...Object.values(spriteData).map(data => data.src),
-    ...Object.values(soundData).map(data => data.src),
-    // flatten
-].reduce<string[]>((acc, val) => acc.concat(val), []);
+import Navbar from "./components/layout/Navbar";
+import Landing from "./components/layout/Landing";
+import Register from "./components/auth/Register";
+import Login from "./components/auth/Login";
+import PrivateRoute from "./components/private-route/PrivateRoute";
+import Dashboard from "./components/dashboard/Dashboard";
 
-export default function App() {
-    const [width, height] = useWindowSize();
+import BitArcade from "../src/bitArcade/play";
+import { Join, Chat } from "./components";
 
-    return (
-        <>
-            <Global styles={globalStyles} />
-            <div css={styles.root(width, height)}>
-                <Game cameraZoom={80}>
-                    <AssetLoader urls={urls} placeholder="Loading assets ...">
-                        <SceneManager defaultScene="office">
-                            <Scene id="office">
-                                <OfficeScene />
-                            </Scene>
-                            <Scene id="other">
-                                <OtherScene />
-                            </Scene>
-                        </SceneManager>
-                    </AssetLoader>
-                </Game>
-            </div>
-        </>
-    );
+import Start from "./components/pages/Start";
+import Board from "./components/pages/Board";
+
+import "./index.css";
+
+
+
+// import "./App.css";
+
+// Check for token to keep user logged in
+if (localStorage.jwtToken) {
+  // Set auth token header auth
+  const token = localStorage.jwtToken;
+  setAuthToken(token);
+  // Decode token and get user info and exp
+  const decoded = jwt_decode(token);
+  // Set user and isAuthenticated
+  store.dispatch(setCurrentUser(decoded));
+  // Check for expired token
+  const currentTime = Date.now() / 1000; // to get in milliseconds
+  if (decoded.exp < currentTime) {
+    // Logout user
+    store.dispatch(logoutUser());
+
+    // Redirect to login
+    window.location.href = "./login";
+  }
 }
+class App extends Component {
+
+  componentDidMount () {
+    const script = document.createElement("script");
+    script.src = "./functions.js";
+    script.async = true;
+    document.body.appendChild(script);
+}
+
+  render() {
+    console.log("window",window)
+    return (
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Navbar />
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+
+            <Switch>
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/bitarcade" component={BitArcade} />
+              <Route path="/chat" component={Chat} />
+              <Route path="/join" exact component={Join} />
+              <Route path="/start" exact component={Start} />
+              <Route path="/game" component={Board} />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
+    );
+  }
+}
+export default App;
