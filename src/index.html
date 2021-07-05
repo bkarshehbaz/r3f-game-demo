@@ -43,13 +43,65 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/index.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+  />
+
+
+<!-- Components Style Sheets -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/bitArcade/play.css"
+ 
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Chat/Chat.css"
+
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/InfoBar/InfoBar.css"
+
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Input/Input.css"
+
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Join/Join.css"
+
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Join/Join.css"
+
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/TextContainer/TextContainer.css"
+
+/>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/index.css"
+
+/>
+  <style>
+    
+  </style>
   </head>
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src='./testing.js'></script>
-    <script src="./detect.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/detect.js"></script>
 
     <script>
       var user = detect.parse(navigator.userAgent);
@@ -78,7 +130,11 @@
       $(document).ready(function () {
         if ($(".board").length || $(".choice-container").length) {
           $("head").append(
-            ` <link rel="stylesheet" type="text/css" href="./tiktok.css" />`
+            `<link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/pages/tiktok.css"
+            
+            />`
           );
           $(".navbar-fixed").hide();
           //  document.styleSheets[8].disabled = true;
@@ -88,8 +144,8 @@
         }
       });
     </script>
-    <script type="text/javascript" src='./functions.js'></script>
-    <script type="text/javascript" src='./index2.js'></script>
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/functions.js'></script>
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/index2.js'></script>
 
  
   </body>

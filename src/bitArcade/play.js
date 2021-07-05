@@ -9,6 +9,7 @@ import {
     getAllUsersSCore,
 } from '../actions/authActions';
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import 'https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/bitArcade/play.css';
 import './play.css';
 
 import jump from '../media/jump.mp3';
@@ -45,6 +46,7 @@ class BitArcade extends Component {
     }
 
     componentDidMount() {
+        // console.log('css', css);
         // If logged in and user navigates to Login page, should redirect them to dashboard
         this.props.getDiamondAndHeart({ email: this.props.auth.user.email });
         this.props.getAllUsersSCore();

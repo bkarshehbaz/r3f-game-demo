@@ -9,7 +9,7 @@ let best_score = 0;
 let heart_availability = false;
 
 function getDiamonds(email) {
-    alert('called getdiamonds');
+    // alert('called getdiamonds');
     // $.ajax({
     //     type: 'POST',
     //     url: 'http://localhost:3000/api/users/diamondAndHeartGet',
