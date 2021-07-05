@@ -139,7 +139,7 @@ href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/index
           $(".navbar-fixed").hide();
           //  document.styleSheets[8].disabled = true;
         } else {
-          $("LINK[href*='tiktok.css']").remove();
+          $("style:last-child").remove();
           $(".navbar-fixed").show();
         }
       });
