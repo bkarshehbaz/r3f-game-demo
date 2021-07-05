@@ -51,7 +51,7 @@
   />
 
 
-<!-- Components Style Sheets -->
+<!----> Components Style Sheets -->
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/bitArcade/play.css"
@@ -92,9 +92,7 @@ rel="stylesheet"
 href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/index.css"
 
 />
-  <style>
-    
-  </style>
+
   </head>
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
@@ -139,7 +137,8 @@ href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/index
           $(".navbar-fixed").hide();
           //  document.styleSheets[8].disabled = true;
         } else {
-          $("head style:last-child").remove();
+          $("LINK[href*='tiktok.css']").remove();
+          //$("head style:last-child").remove();
           $(".navbar-fixed").show();
         }
       });
