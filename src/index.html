@@ -43,55 +43,36 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link
+    <!-- <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/index.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
     crossorigin="anonymous"
-  />
+  /> -->
 
 
-<!----> Components Style Sheets -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/bitArcade/play.css"
- 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Chat/Chat.css"
+<!-- Components Style Sheets -->
 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/InfoBar/InfoBar.css"
+<!-- Play.css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/bitArcade/play.css" />
+<!-- chat css files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/Chat/Chat.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/InfoBar/InfoBar.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/Input/Input.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/Join/Join.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/Messages/Messages.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/Messages/Message/Message.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/TextContainer/TextContainer.css" />
 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Input/Input.css"
+<!-- chat.css -->
 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Join/Join.css"
+<!-- join.css -->
 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/Join/Join.css"
 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/TextContainer/TextContainer.css"
 
-/>
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/index.css"
 
-/>
+
+<!-- InfoBar.css -->
 
   </head>
   <body>
@@ -116,34 +97,24 @@ href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/index
       $(document).ready(function () {
         if ($(".board").length || $(".choice-container").length) {
           $("head").append(
-            ` <link rel="stylesheet" type="text/css" href="./tiktok.css" />`
-          );
-          //  document.styleSheets[8].disabled = true;
-        } else {
-          $("LINK[href*='tiktok.css']").remove();
-        }
-      });
-
-      //load Chat css
-      $(document).ready(function () {
-        if ($(".board").length || $(".choice-container").length) {
-          $("head").append(
             `<link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/components/pages/tiktok.css"
             
             />`
           );
-          $(".navbar-fixed").hide();
           //  document.styleSheets[8].disabled = true;
         } else {
           $("LINK[href*='tiktok.css']").remove();
-          //$("head style:last-child").remove();
-          $(".navbar-fixed").show();
         }
       });
+      //$(".navbar-fixed").hide();
+      //$(".navbar-fixed").show();
+
+      //load Chat css
+ 
     </script>
-    <script type="text/javascript" src='https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/functions.js'></script>
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo@master/src/functions.js'></script>
     <script type="text/javascript" src='https://cdn.jsdelivr.net/gh/bkarshehbaz/r3f-game-demo/src/index2.js'></script>
 
  

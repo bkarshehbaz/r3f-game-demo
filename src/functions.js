@@ -28,7 +28,7 @@ function getDiamonds(email) {
 
 $.ajax({
     type: 'POST',
-    url: 'http://localhost:3000/api/users/diamondAndHeartGet',
+    url: 'http://localhost:5000/api/users/diamondAndHeartGet',
     data: {
         email: db_email,
     },
@@ -474,7 +474,7 @@ function obstacle_move() {
                 };
                 $.ajax({
                     type: 'POST',
-                    url: 'http://localhost:3000/api/users/diamondAndHeartUpdate',
+                    url: 'http://localhost:5000/api/users/diamondAndHeartUpdate',
 
                     data: newData,
                     success: function(data) {
@@ -1505,7 +1505,7 @@ function over() {
         };
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/api/users/diamondAndHeartUpdate',
+            url: 'http://localhost:5000/api/users/diamondAndHeartUpdate',
 
             data: scoreUpdate,
             success: function(data) {

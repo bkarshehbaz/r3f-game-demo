@@ -10,7 +10,8 @@ import {
 } from '../actions/authActions';
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import 'https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/bitArcade/play.css';
-import './play.css';
+
+// import './play.css';
 
 import jump from '../media/jump.mp3';
 import death from '../media/death.mp3';

@@ -90,7 +90,7 @@ function heart_btn() {
         };
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:3000/api/users/diamondAndHeartUpdate',
+            url: 'http://localhost:5000/api/users/diamondAndHeartUpdate',
 
             data: newData3,
             success: function(data) {
@@ -203,7 +203,7 @@ function gameplay_chance_yes() {
     };
     $.ajax({
         type: 'POST',
-        url: 'http://localhost:3000/api/users/diamondAndHeartUpdate',
+        url: 'http://localhost:5000/api/users/diamondAndHeartUpdate',
 
         data: heartMinus,
         success: function(data) {

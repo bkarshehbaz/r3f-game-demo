@@ -68,7 +68,7 @@ class App extends Component {
 
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/bitarcade" component={BitArcade} />
+              <PrivateRoute exact path="/bitarcade" component={BitArcade} />
               <Route path="/chat" component={Chat} />
               <Route path="/join" exact component={Join} />
               <Route path="/start" exact component={Start} />

@@ -9,7 +9,7 @@ import logo from './logo.png';
 import { Redirect } from 'react-router-dom';
 
 import socketIOClient from 'socket.io-client';
-import './tiktok.css';
+// import './tiktok.css';
 
 const ENDPOINT = 'http://localhost:5000/';
 class Start extends React.Component {
