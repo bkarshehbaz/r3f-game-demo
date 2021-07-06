@@ -1037,7 +1037,8 @@ function boss_attack() {
 
 let boss_attack_fire = function() {
     $('.boss').css({
-        background: 'url("./media/boss_spit.png")',
+        background:
+            'url("https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_spit.png")',
         transition: '0s',
         'transition-timing-function': 'linear',
     });
@@ -1049,7 +1050,8 @@ let boss_attack_fire = function() {
         };
         setTimeout(() => {
             $('.boss').css({
-                background: 'url("./media/boss_idle.gif")',
+                background:
+                    'url("https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_idle.gif")',
                 transition: '0s',
                 'transition-timing-function': 'linear',
             });
