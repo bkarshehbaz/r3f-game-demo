@@ -85,6 +85,10 @@ class BitArcade extends Component {
         console.log('scores', this.props.auth.allUsersScore);
         return (
             <div>
+                <img
+                    src="https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_move.png"
+                    alt=""
+                />
                 <div id="sprites" style={{ display: 'none' }}>
                     <img src={main_run} alt="" />
                     <img src={main_jump_up} alt="" />

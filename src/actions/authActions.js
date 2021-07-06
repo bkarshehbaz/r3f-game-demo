@@ -54,8 +54,7 @@ export const getDiamondAndHeart = userData => dispatch => {
     axios
         .post(URL + '/api/users/diamondAndHeartGet', userData)
         .then(res => {
-            // Save to localStorage
-            // Set current user
+            console.log('data', res.data);
             dispatch({
                 type: GET_DIAMOND_AND_HEART,
                 payload: res.data,

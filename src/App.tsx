@@ -21,7 +21,7 @@ import { Join, Chat } from "./components";
 import Start from "./components/pages/Start";
 import Board from "./components/pages/Board";
 
-import "./index.css";
+// import "./index.css";
 
 
 

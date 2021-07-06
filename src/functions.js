@@ -908,7 +908,8 @@ function boss_attack() {
                         setTimeout(() => {
                             boss_mouvement = true;
                             $('.boss').css({
-                                background: "url('./media/boss_move.png')",
+                                background:
+                                    "url('https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_move.png')",
                                 transition: '0s',
                                 'transition-timing-function': 'linear',
                             });
@@ -931,7 +932,8 @@ function boss_attack() {
                         setTimeout(() => {
                             boss_mouvement = true;
                             $('.boss').css({
-                                background: "url('./media/boss_move.png')",
+                                background:
+                                    "url('https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_move.png')",
                                 transition: '0s',
                                 'transition-timing-function': 'linear',
                             });
@@ -957,7 +959,8 @@ function boss_attack() {
                         setTimeout(() => {
                             boss_mouvement = true;
                             $('.boss').css({
-                                background: "url('./media/boss_move.png')",
+                                background:
+                                    "url('https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_move.png')",
                                 transition: '0s',
                                 'transition-timing-function': 'linear',
                             });
@@ -986,7 +989,8 @@ function boss_attack() {
                         setTimeout(() => {
                             boss_mouvement = true;
                             $('.boss').css({
-                                background: "url('./media/boss_move.png')",
+                                background:
+                                    "url('https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_move.png')",
                                 transition: '0s',
                                 'transition-timing-function': 'linear',
                             });
@@ -1018,7 +1022,8 @@ function boss_attack() {
                         setTimeout(() => {
                             boss_mouvement = true;
                             $('.boss').css({
-                                background: "url('./media/boss_move.png')",
+                                background:
+                                    "url('https://raw.githubusercontent.com/bkarshehbaz/r3f-game-demo/master/src/media/boss_move.png')",
                                 transition: '0s',
                                 'transition-timing-function': 'linear',
                             });
