@@ -20,6 +20,7 @@ import { Join, Chat } from "./components";
 
 import Start from "./components/pages/Start";
 import Board from "./components/pages/Board";
+import R3f from "./App-2";
 
 // import "./index.css";
 
@@ -65,6 +66,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/r3f" component={R3f} />
 
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
